@@ -1,0 +1,307 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0px;
+}
+/* Menu */
+.wrapper{
+    background-color: goldenrod;
+}
+.header{
+    background-color: rgb(255, 205, 0);
+    padding: 12px 20px;
+    
+}
+.menu-container{
+    background-image: url("../c2e902e031e1d9d932411dd0b8ab5eef.jpg");
+    background-size: cover;
+    background-position-y: -100px;
+    max-width: 1500px;
+    margin: 0px auto;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    background-color: rgb(255, 205, 0);
+}
+nav ul li {
+    background-color: rgb(194, 157, 10);
+    border-radius: 20px;
+    margin-right: 10px;
+    height: 40px;
+}
+.nobd{
+    border: none;
+}
+#logo{
+    padding: 5px 0px;
+}
+#logo img{
+    max-width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+#main-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    margin-top: 10px;
+}
+#main-menu li { position: relative; }
+#main-menu a { 
+    color: black;
+    display: block;
+    padding: 10px 40px;
+    text-decoration: none;
+}
+#main-menu ul.sub-menu { 
+    position: absolute;
+    list-style: none;
+    width: 200px;
+    display: none;
+    padding-bottom: 2px;
+}
+#main-menu li:hover > ul.sub-menu { display: block; }
+#main-menu ul.sub-menu a { 
+    padding: 8px 15px;
+}
+#main-menu ul.sub-menu li:last-child a { border: none; margin-top: 10px; }
+#main-menu ul.sub-menu ul.sub-menu { left: 150px; top: 0; }
+#main-menu ul.sub-menu li:hover { background-color: rgb(245, 226, 151); }
+@media (max-width: 768px) {
+    /* Menu */
+    #main-menu {
+    flex-direction: column;
+}
+    #main-menu li {
+    margin-right: 0;
+    margin-bottom: 10px;
+}
+    .sub-menu {
+    position: static;
+}
+/* footer */
+.footer-container table {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-container td {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .footer-social-media-links, .footer-nav, .footer-lien-he {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-social-media-links > div,
+  .footer-nav > div,
+  .footer-lien-he > div {
+    width: 100%;
+  }
+  .footer-social-media-links,
+  .footer-nav ul,
+  .footer-lien-he {
+    align-items: center;
+  }
+  /* Body */
+}
+/* thông tin sản phầm */
+.thongtinsanpham {
+    display: flex;
+    flex-direction: row;
+  }
+  .leftcontent, .rightcontent {
+    width: 100%;
+  }
+  .leftcontent {
+    margin-left: 60px;
+  }
+  .rightcontent {
+    margin: 50px 0; 
+    padding-right: 60px;
+  }
+  #hinh {
+    width: 100%;
+    max-width: 50%;
+    height: auto;  
+    margin: 0 auto;
+  }
+  #ten {
+    font-size: 30px;
+  }
+  #gioithieu {
+    font-size: 22px;
+  }
+  #muangay {
+    background-color: rgb(255, 205, 0);
+    padding: 10px 20px;
+    font-size: 20px;
+  }
+  #muangay:hover {
+    background-color: rgb(0, 255, 55);
+    color: white;
+  }
+  .size, .quantity, .btn-box {
+    display: flex;
+    align-items: center;
+  }
+  .size, .quantity {
+    margin: 20px 0; 
+  }
+  .size p, .quantity p {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .psize {
+    width: 60px;
+    height: 30px;
+    border: 1px solid #ff5e00;
+    color: #000;
+    text-align: center;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  .psizeactive {
+    border-width: 1.5px;
+    color: #ff5e00;
+    font-weight: 500;
+  }
+  .quantity input {
+    width: 40px;
+    height: 25px;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+    margin-left: 15px;
+  }
+  .btn-box {
+    margin-top: 40px;
+  }
+  .btn-box button {
+    font-size: 18px;
+    padding: 8px 25px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+  }
+  .cart-btn {
+    background-color: #ff5e00;
+    margin-right: 20px;
+  }
+  @media (max-width: 768px) { /* Điều chỉnh điểm breakpoint nếu cần */
+    .thongtinsanpham {
+      flex-direction: column; /* Chuyển sang cột dọc khi thu nhỏ */
+    }
+  
+    .leftcontent {
+      margin: 0; /* Reset lại margin cho leftcontent */
+    }
+  
+    .rightcontent {
+      margin: 15px 0; /* Khoảng cách giữa hai phần khi xếp dọc */
+    }
+  
+    #hinh {
+      max-width: 100%; /* Cho phép hình ảnh chiếm toàn bộ chiều rộng khi xếp dọc */
+    }
+  }
+  
+/* Footer */
+footer{
+    margin-top: 50px;
+    width: 100%;
+    background-color: hsl(0, 0%, 75%);
+}
+.footer-container a{
+    color: black;
+    text-decoration: none;
+    background-color: transparent;
+}
+table{
+    width: 100%;
+}
+    /* Logo mạng xã hội */
+    .footer-social-media-links{
+        width: 33%;
+    }
+    .social-icon{
+        display: flex;
+        justify-content: center;
+    }
+    .social-icon a{
+        padding :10px;
+        background-color: white;
+        margin: 15px;
+        border-radius: 50%;
+    }
+    .social-icon a i{
+        font-size: 2em;
+        opacity: 0.9;
+    }
+        /* Facebook */
+        .facebook:hover{
+            color: white;
+            background-color: blue;
+        }
+        /* Youtube */
+        .youtube:hover{
+            color: red;
+        }
+        /* Twitter */
+        .twitter:hover{
+            color: white;
+            background-color: blue;
+        }
+        /* Instagram */
+        .instagram:hover{
+            color: white;
+            background-color: deeppink;
+            transition: 1s;
+        }
+    .social-icon a:hover{
+        transition: 0.5s;
+    }
+
+    /* Thanh đièu hướng của footer */
+    .footer-nav{
+        width: 33%;
+        text-align: center;
+        font-size: 18px;
+    }
+    .footer-nav a:hover{
+        font-size: 20px;
+        font-weight: bold;
+        transition: 0.5s;
+    }
+    .footer-nav ul{
+        list-style: none;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .footer-nav ul li{
+        padding: 5px;
+    }
+
+    /* Phần liên hệ */
+    .footer-lien-he{
+        width: 33%;
+        text-align: left;
+        padding: 15px 20px 15px 100px;
+        font-size: 18px;
+    }
+    .footer-lien-he p{
+        padding: 5px;
+    }
+    .footer-lien-he a:hover{    
+        text-decoration: underline;
+        background-color: transparent;
+        transition: 0.5s;
+    }

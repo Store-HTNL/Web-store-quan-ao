@@ -40,9 +40,9 @@ function updatesanpham(){
     });
 }
 function xoasanpham(){
-    let macanxoa = document.getElementById('macanxoa').value
+    let macanxoa = document.getElementById('tencanxoa').value
     let luutrusanpham = JSON.parse(localStorage.getItem('luutrusanpham')) || [];
-    let sanphamcanxoa = luutrusanpham.findIndex(luutrusanpham => luutrusanpham.masanpham === macanxoa);
+    let sanphamcanxoa = luutrusanpham.findIndex(luutrusanpham => luutrusanpham.tensanpham === macanxoa);
 
     if (sanphamcanxoa !== -1) {
         luutrusanpham.splice(sanphamcanxoa, 1);

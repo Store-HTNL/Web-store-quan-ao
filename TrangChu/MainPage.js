@@ -2,7 +2,7 @@ function hienThiDanhSachSanPhamAo() {
     let luutrusanpham = JSON.parse(localStorage.getItem('luutrusanpham')) || [];
     let danhSachSanPham = document.getElementById("danhsachsanphamao");
     danhSachSanPham.innerHTML = '';
-    let row = document.createElement('div');
+    let row = document .createElement('div');
     row.classList.add('product-row');
     
     let sanPhamAo = luutrusanpham.filter(sanPham => sanPham.sanpham === "áo");
@@ -12,6 +12,7 @@ function hienThiDanhSachSanPhamAo() {
         let productCell1 = document.createElement('div');
         let productCell2 = document.createElement('div');
         productCell.classList.add('product-cell');
+        productCell1.classList.add('product-cell1');
         productCell2.classList.add('product-cell2');
 
         let hinhSanPham = document.createElement('img');
@@ -28,7 +29,7 @@ function hienThiDanhSachSanPhamAo() {
         productButton.textContent = 'Chi tiết';
         productButton.onclick = () =>{
             localStorage.setItem('sanPhamChiTiet', JSON.stringify(sanpham));
-            window.location.href = '/Đồ Án/TrangChu/chitietsanpham.html';
+            window.location.href = '/ChiTiet/chitietsanpham.html';
         }
 
         productCell.appendChild(hinhSanPham);
@@ -47,7 +48,7 @@ function hienThiDanhSachSanPhamQuan() {
     let luutrusanpham = JSON.parse(localStorage.getItem('luutrusanpham')) || [];
     let danhSachSanPham = document.getElementById("danhsachsanphamquan");
     danhSachSanPham.innerHTML = '';
-    let sanPhamQuan = luutrusanpham.filter(sanPham => sanPham.sanpham === "quần");
+    let sanPhamQuan = luutrusanpham.filter(sanPham => sanPham.sanpham === "Quần");
     let row = document.createElement('div');
     row.classList.add('product-row');
 
@@ -57,6 +58,7 @@ function hienThiDanhSachSanPhamQuan() {
         let productCell1 = document.createElement('div');
         let productCell2 = document.createElement('div');
         productCell.classList.add('product-cell');
+        productCell1.classList.add('product-cell1');
         productCell2.classList.add('product-cell2');
         
         let hinhSanPham = document.createElement('img');
@@ -73,7 +75,7 @@ function hienThiDanhSachSanPhamQuan() {
         productButton.textContent = 'Chi tiết';
         productButton.onclick = () =>{
             localStorage.setItem('sanPhamChiTiet', JSON.stringify(sanpham));
-            window.location.href = '/Đồ Án/TrangChu/chitietsanpham.html';
+            window.location.href = '../ChiTiet/chitietsanpham.html';
         }
         
         productCell.appendChild(hinhSanPham);

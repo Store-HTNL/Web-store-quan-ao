@@ -5,7 +5,7 @@ function hienThiDanhSachSanPhamAo() {
     let row = document.createElement('div');
     row.classList.add('product-row');
 
-    let sanPhamAo = luutrusanpham.filter(sanPham => sanPham.sanpham === "áo");
+    let sanPhamAo = luutrusanpham.filter(sanPham => sanPham.sanpham.toLowerCase() === "áo");
     for (let i = 1; i < sanPhamAo.length; i += 3) {
         let row = document.createElement('div');
         row.classList.add('product-row');
@@ -32,7 +32,7 @@ function hienThiDanhSachSanPhamAo() {
             productButton.textContent = 'Chi tiết';
             productButton.onclick = () =>{
                 localStorage.setItem('sanPhamChiTiet', JSON.stringify(sanpham));
-                window.location.href = '/Đồ Án/TrangChu/chitietsanpham.html';
+                window.location.href = '../ChiTiet/chitietsanpham.html';
             }
             productCell.appendChild(hinhSanPham);
             productCell1.appendChild(tenSanPham);

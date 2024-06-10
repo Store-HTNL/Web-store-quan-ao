@@ -1,16 +1,17 @@
-function hienThiDanhSachSanPham() {
+function hienThiDanhSachSanPhamQuan() {
     let luutrusanpham = JSON.parse(localStorage.getItem('luutrusanpham')) || [];
-    let danhSachSanPham = document.getElementById("danhsachsanpham");
+    let danhSachSanPham = document.getElementById("danhsachsanphamquan");
     danhSachSanPham.innerHTML = '';
     let row = document.createElement('div');
     row.classList.add('product-row');
-    
-    for (let i = 1; i < luutrusanpham.length; i += 3) {
+
+    let sanPhamQuan = luutrusanpham.filter(sanPham => sanPham.sanpham.toLowerCase() === "đầm");
+    for (let i = 1; i < sanPhamQuan.length; i += 3) {
         let row = document.createElement('div');
         row.classList.add('product-row');
 
-        for (let j = i; j < i + 3 && j < luutrusanpham.length; j++) {
-            let sanpham = luutrusanpham[j];
+        for (let j = i; j < i + 3 && j < sanPhamQuan.length; j++) {
+            let sanpham = sanPhamQuan[j];
             let productCell = document.createElement('div');
             let productCell1 = document.createElement('div');
             let productCell2 = document.createElement('div');
@@ -26,7 +27,7 @@ function hienThiDanhSachSanPham() {
             let giaSanPham = document.createElement('p');
             giaSanPham.classList.add('price');
             giaSanPham.textContent = sanpham.gia;
-            productButton = document.createElement('a');    
+            productButton = document.createElement('a');
             productButton.classList.add('chitiet-btn');
             productButton.textContent = 'Chi tiết';
             productButton.onclick = () =>{
@@ -46,7 +47,6 @@ function hienThiDanhSachSanPham() {
         danhSachSanPham.appendChild(row);
     }
 }
-
 window.onload = function(){
-    hienThiDanhSachSanPham()
+    hienThiDanhSachSanPhamQuan()
 };

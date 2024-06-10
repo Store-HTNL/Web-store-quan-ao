@@ -1,0 +1,51 @@
+.Content-Center{
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    width: 0;
+}
+body {
+    background-image: linear-gradient(to right, #190a05, #DECBA4);
+    padding: 45px 0;
+    color: rgb(0, 0, 0);
+  }
+  .avatar {
+    border-radius: 100px;
+ margin: 5px;
+  }
+  p {
+    font-family: system-ui;
+    width: 450px;
+  }
+  .button {
+    margin-bottom: 1px;
+    width: 400px;
+    padding: 10px;
+    border-radius: 100px;
+    font-family: "Roboto Condensed", cursive;
+    font-size: 20px;
+  }
+    .button .fa-phone-alt{
+        border-radius: 50%
+    }
+ .button:hover .fa-phone-alt{
+    color: green;
+ }
+ .button:hover .fa-facebook{
+    color: blue;
+    background-color:  white;
+    border-radius: 50%
+ }
+ .button:hover .fa-instagram{
+    color: deeppink;
+    background-color: white;
+    border-radius: 70%;
+ }
+ .button:hover .fa-youtube{
+    color: red;
+ }
+ .button:hover .fa-twitter{
+
+    color: blue;
+ 
+ }

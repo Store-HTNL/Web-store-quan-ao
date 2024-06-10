@@ -1,10 +1,11 @@
 function sanphamcantim(){
     let luutrusanpham = JSON.parse(localStorage.getItem('luutrusanpham')) || [];
     let danhSachSanPham = document.getElementById('danhsachsanphamcantim');
-    let timkiem = document.getElementById('sanphamcantim').value;
+    let textinput = document.getElementById('sanphamcantim').value;
+    let timkiem = textinput.toLowerCase();
     danhSachSanPham.innerHTML = '';
-    let loaisanpham = luutrusanpham.filter(sanPham => sanPham.sanpham == timkiem);
-    let tensanpham = luutrusanpham.findIndex(sanPham => sanPham.tensanpham == timkiem);
+    let loaisanpham = luutrusanpham.filter(sanPham => sanPham.sanpham.toLowerCase() == timkiem);
+    let tensanpham = luutrusanpham.findIndex(sanPham => sanPham.tensanpham.toLowerCase() == timkiem);
     if(tensanpham != -1){
         let row = document.createElement('div');
         row.classList.add('product-row');
@@ -49,7 +50,7 @@ function sanphamcantim(){
                 productButton.textContent = 'Chi tiết';
                 productButton.onclick = () =>{
                     localStorage.setItem('sanPhamChiTiet', JSON.stringify(sanpham));
-                    window.location.href = '/Đồ Án/TrangChu/chitietsanpham.html';
+                    window.location.href = '../ChiTiet/chitietsanpham.html';
                 }
                 productCell.appendChild(hinhSanPham);
                 productCell1.appendChild(tenSanPham);

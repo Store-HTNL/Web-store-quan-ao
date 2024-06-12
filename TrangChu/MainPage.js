@@ -48,7 +48,7 @@ function hienThiDanhSachSanPhamQuan() {
     let luutrusanpham = JSON.parse(localStorage.getItem('luutrusanpham')) || [];
     let danhSachSanPham = document.getElementById("danhsachsanphamquan");
     danhSachSanPham.innerHTML = '';
-    let sanPhamQuan = luutrusanpham.filter(sanPham => sanPham.sanpham === "Quần");
+    let sanPhamQuan = luutrusanpham.filter(sanPham => sanPham.sanpham === "quần");
     let row = document.createElement('div');
     row.classList.add('product-row');
 

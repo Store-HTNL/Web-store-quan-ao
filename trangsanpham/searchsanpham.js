@@ -4,27 +4,8 @@ function sanphamcantim(){
     let textinput = document.getElementById('sanphamcantim').value;
     let timkiem = textinput.toLowerCase();
     danhSachSanPham.innerHTML = '';
-    let loaisanpham = luutrusanpham.filter(sanPham => sanPham.loaisanpham.toLowerCase() == timkiem || sanPham.sanpham.toLowerCase() == timkiem);
-    let tensanpham = luutrusanpham.findIndex(sanPham => sanPham.tensanpham.toLowerCase() == timkiem);
-    if(tensanpham != -1){
-        let row = document.createElement('div');
-        row.classList.add('product-row');
-        let sanpham = document.createElement('div');
-        sanpham.classList.add('product-cell2');
-        sanpham.innerHTML = `
-            <div class="product-cell"><img class="pic1" src="${luutrusanpham[tensanpham].urlhinhanh}"></div>
-            <div>
-                <h3 class="name">${luutrusanpham[tensanpham].tensanpham}</h3>
-                <p class="price">${luutrusanpham[tensanpham].gia}</p>
-                <a class="chitiet-btn" href="trangsanpham.html">Chi tiết</a>
-            </div>
-        `;
-        row.appendChild(sanpham);
-        danhSachSanPham.appendChild(row);
-        return;
-    }
-    else{
-        for (let i = 1; i < loaisanpham.length; i += 3) {
+    let loaisanpham = luutrusanpham.filter(sanPham => sanPham.loaisanpham.toLowerCase() == timkiem || sanPham.sanpham.toLowerCase() == timkiem || sanPham.tensanpham.toLowerCase() == timkiem);
+        for (let i = 0; i < loaisanpham.length; i += 3) {
             let row = document.createElement('div');
             row.classList.add('product-row');
 
@@ -63,7 +44,7 @@ function sanphamcantim(){
             }
             danhSachSanPham.appendChild(row);
         }
-    }
+    
 }
 function enterdetimkiem(event) {
     let luutrusanpham = JSON.parse(localStorage.getItem('luutrusanpham')) || [];
@@ -71,29 +52,10 @@ function enterdetimkiem(event) {
     let textinput = document.getElementById('sanphamcantim').value;
     let timkiem = textinput.toLowerCase();
     danhSachSanPham.innerHTML = '';
-    let loaisanpham = luutrusanpham.filter(sanPham => sanPham.loaisanpham.toLowerCase() == timkiem || sanPham.sanpham.toLowerCase() == timkiem);
-    let tensanpham = luutrusanpham.findIndex(sanPham => sanPham.tensanpham.toLowerCase() == timkiem);
+    let loaisanpham = luutrusanpham.filter(sanPham => sanPham.loaisanpham.toLowerCase() == timkiem || sanPham.sanpham.toLowerCase() == timkiem || sanPham.tensanpham.toLowerCase() == timkiem);
     let key = event.key
-    if (key === 'Enter') {
-        if(tensanpham != -1){
-            let row = document.createElement('div');
-            row.classList.add('product-row');
-            let sanpham = document.createElement('div');
-            sanpham.classList.add('product-cell2');
-            sanpham.innerHTML = `
-                <div class="product-cell"><img class="pic1" src="${luutrusanpham[tensanpham].urlhinhanh}"></div>
-                <div>
-                    <h3 class="name">${luutrusanpham[tensanpham].tensanpham}</h3>
-                    <p class="price">${luutrusanpham[tensanpham].gia}</p>
-                    <a class="chitiet-btn" href="trangsanpham.html">Chi tiết</a>
-                </div>
-            `;
-            row.appendChild(sanpham);
-            danhSachSanPham.appendChild(row);
-            return;
-        }
-        else{
-            for (let i = 1; i < loaisanpham.length; i += 3) {
+        if (key === 'Enter') {
+            for (let i = 0; i < loaisanpham.length; i += 3) {
                 let row = document.createElement('div');
                 row.classList.add('product-row');
     
@@ -133,5 +95,4 @@ function enterdetimkiem(event) {
                 danhSachSanPham.appendChild(row);
             }
         }
-    }
 }

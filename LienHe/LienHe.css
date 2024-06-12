@@ -16,14 +16,6 @@ body {
   position: relative;
 }
 /* nên tôi */
-body::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
 
 section {
   position: relative;
@@ -193,4 +185,11 @@ section {
   .contact-form {
     width: 100%;
   }
+}
+/* trở về bt */
+.backicon{
+  width: 40px;
+  position: absolute;
+  margin-top: 55px;
+  margin-left: 40px;
 }

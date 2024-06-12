@@ -5,7 +5,7 @@
     width: 0;
 }
 body {
-    background-image: linear-gradient(to right,#e87c58, #DECBA4);
+    background-image: linear-gradient(to right, #ed9376, #DECBA4);
     padding: 45px 0;
     color: rgb(0, 0, 0);
   }
@@ -45,7 +45,10 @@ body {
     color: red;
  }
  .button:hover .fa-twitter{
-
     color: blue;
- 
+ }
+ .backicon{
+   width: 40px;
+   position: absolute;
+   margin-left: 40px;
  }

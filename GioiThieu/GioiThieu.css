@@ -5,6 +5,8 @@
     width: 0;
 }
 body {
+   width: 100%;
+   justify-content: center;
     background-image: linear-gradient(to right,#e87c58, #DECBA4);
     padding: 45px 0;
     color: rgb(0, 0, 0);
@@ -45,7 +47,6 @@ body {
     color: red;
  }
  .button:hover .fa-twitter{
-
     color: blue;
- 
  }
+/* trở về */

@@ -6,7 +6,7 @@ function hienThiDanhSachSanPhamAo() {
     row.classList.add('product-row');
 
     let sanPhamAo = luutrusanpham.filter(sanPham => sanPham.loaisanpham.toLowerCase() === "quần ngắn");
-    for (let i = 1; i < sanPhamAo.length; i += 3) {
+    for (let i = 0; i < sanPhamAo.length; i += 3) {
         let row = document.createElement('div');
         row.classList.add('product-row');
 

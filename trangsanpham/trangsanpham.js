@@ -5,7 +5,7 @@ function hienThiDanhSachSanPham() {
     let row = document.createElement('div');
     row.classList.add('product-row');
     
-    for (let i = 1; i < luutrusanpham.length; i += 3) {
+    for (let i = 0; i < luutrusanpham.length; i += 3) {
         let row = document.createElement('div');
         row.classList.add('product-row');
 

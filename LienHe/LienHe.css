@@ -10,7 +10,7 @@
 body {
   min-height: 100vh;
   align-items: center;
-  background-image: url('img.jpg');
+  background-image: url('LienHe.jpeg');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -23,7 +23,6 @@ body::after {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0,0,0,0.8);
 }
 
 section {
@@ -40,9 +39,11 @@ section {
   padding-left: 20px;
   padding-right: 20px;
 }
-
+.header{
+  padding-top: 50px;
+}
 .section-header {
-  margin-bottom: 50px;
+  margin-bottom: auto;
   text-align: center;
 }
 
@@ -63,7 +64,7 @@ section {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  margin-top: 20%;
+  margin-top: 5%;
 }
 
 .contact-info {
@@ -79,7 +80,7 @@ section {
 .contact-info-icon {
   height: 70px;
   width: 70px;
-  background-color: #aa5f5f;
+  background-color: #879dff;
   text-align: center;
   border-radius: 50%;
 }
@@ -93,7 +94,7 @@ section {
   margin-left: 20px;
 }
 .contact-info-content h4 {
-  color: #1da9c0;
+  color: rgb(255, 255, 255);
   font-size: 1.4em;
   margin-bottom: 5px;
 }

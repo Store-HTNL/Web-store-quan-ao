@@ -71,7 +71,7 @@ function enterdetimkiem(event) {
     let textinput = document.getElementById('sanphamcantim').value;
     let timkiem = textinput.toLowerCase();
     danhSachSanPham.innerHTML = '';
-    let loaisanpham = luutrusanpham.filter(sanPham => sanPham.loaisanpham.toLowerCase() == timkiem );
+    let loaisanpham = luutrusanpham.filter(sanPham => sanPham.loaisanpham.toLowerCase() == timkiem || sanPham.sanpham.toLowerCase() == timkiem);
     let tensanpham = luutrusanpham.findIndex(sanPham => sanPham.tensanpham.toLowerCase() == timkiem);
     let key = event.key
     if (key === 'Enter') {

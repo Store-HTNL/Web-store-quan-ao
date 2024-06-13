@@ -1,19 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 /* nên */
 body {
   min-height: 100vh;
-  align-items: center;
   background-image: url('LienHe.jpeg');
   background-size: cover;
   background-position: center;
+  font-family: "Montserrat", sans-serif;
   position: relative;
+  overflow: hidden;
 }
 /* nên tôi */
 
@@ -32,7 +31,8 @@ section {
   padding-right: 20px;
 }
 .header{
-  padding-top: 50px;
+  margin-top: 60px;
+  text-align: center;
 }
 .section-header {
   margin-bottom: auto;
@@ -168,6 +168,9 @@ section {
 }
 
 @media (max-width: 991px) {
+  body{
+    font-size: smaller;
+  }
   section {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -190,6 +193,15 @@ section {
 .backicon{
   width: 40px;
   position: absolute;
-  margin-top: 55px;
   margin-left: 40px;
+}
+
+@media (max-width: 425px){
+  .backicon {
+    width: 25px;
+    margin-left: 20px;
+  }
+  .header {
+    font-size: 12px;
+  }
 }

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
 .Content-Center{
     display: block;
     margin-left:auto;
@@ -6,15 +7,20 @@
 }
 body {
     background-image: linear-gradient(to right, #ed9376, #DECBA4);
-    padding: 45px 0;
-    color: rgb(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
   }
-  .avatar {
-    border-radius: 100px;
- margin: 5px;
+.header{
+   margin-top: 60px;
+   font-size: 40px;
+}
+.center{
+   text-align: center;
+}
+.avatar {
+   border-radius: 100px;
+   margin: 5px;
   }
   p {
-    font-family: system-ui;
     width: 450px;
   }
   .button {
@@ -50,5 +56,24 @@ body {
  .backicon{
    width: 40px;
    position: absolute;
-   margin-left: 40px;
+   margin-left: 20px;
  }
+@media(max-width:425px){
+   body{
+      font-size: smaller;
+   }
+   .header{
+      font-size: 25px;
+   }
+   .backicon{
+      width: 30px;
+      margin-left: 20px;
+   }
+   .button{
+      width: 300px;
+      font-size: medium;
+   }
+   h2{
+      font-size: medium;
+   }
+}

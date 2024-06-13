@@ -614,3 +614,25 @@ table, td{
         background-color: transparent;
         transition: 0.5s;
     }
+    @media(max-width:425px){
+      .footer-lien-he{
+        padding-left: 0px;
+      }
+    }
+    @media (max-width: 480px) { 
+      .product-type {
+        font-size: 15px;
+      }
+      .more {
+        font-size: 15px;
+      }
+      .price{
+        font-size: 15px;
+      }
+      .chitiet-btn{
+        font-size: 12px;
+      }
+      .name{
+        font-size: 15px;
+      }
+    }

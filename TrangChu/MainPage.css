@@ -39,7 +39,6 @@
     --normal-font-size: 1rem;
   }
 }
-
 /*=============== BASE ===============*/
 * {
   box-sizing: border-box;
@@ -406,9 +405,7 @@ a {
         width: 100%;
         height: auto;
     }
-
 /* body */
-
 .main-page-body{
     text-align: center;
 }
@@ -419,14 +416,12 @@ a {
     .product{
         list-style: none;
         display: flex;
-
     }
     .product-type{
         text-align: left;
         width: 50%;
         font-size: 25px;
         padding-left: 60px;
-        
     }
     .more{
         width: 50%;
@@ -434,7 +429,6 @@ a {
         padding-right: 35px;
         margin-right: auto;
         text-align: right;
-        padding: auto;
     }
     .product a{
         text-decoration: none;
@@ -536,7 +530,6 @@ a {
     width: 500px;
    
 }
-
 /* Footer */
 footer{
     margin-top: 50px;
@@ -551,13 +544,6 @@ footer{
 table{
     width: 100%;
 }
-/* 
-table, td{
-    border: 1px solid;
-    border-collapse: collapse;
-} */
-
-
     /* Logo mạng xã hội */
     .footer-social-media-links{
         width: 33%;
@@ -624,7 +610,7 @@ table, td{
     .footer-lien-he{
         width: 33%;
         text-align: left;
-        padding: 15px 20px 15px 100px;
+        padding: 10px 0px 10px 20px;
         font-size: 18px;
     }
     .footer-lien-he p{
@@ -635,3 +621,26 @@ table, td{
         background-color: transparent;
         transition: 0.5s;
     }
+    @media(max-width:425px){
+      .footer-lien-he{
+        padding-left: 0px;
+      }
+    }
+
+@media (max-width: 480px) { 
+  .product-type {
+    font-size: 15px;
+  }
+  .more {
+    font-size: 15px;
+  }
+  .price{
+    font-size: 15px;
+  }
+  .chitiet-btn{
+    font-size: 12px;
+  }
+  .name{
+    font-size: 15px;
+  }
+}

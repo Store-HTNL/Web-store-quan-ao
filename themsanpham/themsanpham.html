@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quản lý sản phẩm</title>
+    <link rel="stylesheet" href="themsanpham.css">
+</head>
+<body>
+<div id="quanly" style="display: block;">    
+    <h1 id="displayData" align="center">&nbsp;</h1>
+    <table>
+        <tr>
+            <td>
+                <div class="bd1">
+                    <h3>Thêm sản phẩm</h3>
+                    <input type="text" id="masanpham" placeholder="Mã sản phẩm">
+                    <input type="text" id="tensanpham" placeholder="Tên sản phẩm">
+                    <input type="text" id="sanpham" placeholder="Loại sản phẩm">
+                    <input type="text" id="phanloai" placeholder="Phân loại">
+                    <input type="text" id="urlhinhanh" placeholder="URl hình ảnh">
+                    <input type="text" id="mota" placeholder="Mô tả">
+                    <input type="text" id="SLtonkho" placeholder="SL tồn kho">
+                    <input type="text" id="SLthucte" placeholder="SL thực tế">
+                    <input type="text" id="thuonghieuSP" placeholder="Thương hiệu SP">
+                    <input type="text" id="gia" placeholder="Giá">
+                    <button type="button" id="addsanpham" onclick="themsanpham()">Thêm Sản Phẩm</button>
+                </div>
+            </td>
+            <td>
+                <div class="bd2">
+                    <p>Nhập tên sản phẩm cần xoá</p>
+                    <input type="text" id="tencanxoa">
+                    <button type="button" id="xoasanpham" onclick="xoasanpham()">Xóa Sản Phẩm</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div class="bd3">
+        <h2>Danh sách sản phẩm</h2>
+        <ul id="danhSachSanPham"></ul>
+        
+    </div>
+    <button type="button" id="chitietsanphambt" onclick="chitietsanphambt()">Xem chi tiết</button>
+</div>
+
+<div id="sanphamscreen" style="display: none;">
+    <div class="sanpham">
+        <h2 id="ten">tt</h2>
+        <img id="hinh" src="" alt="">
+        <p id="gioithieu"></p>
+        <p id="giatien"></p>
+    </div>
+    <div id="chuyensanpham"></div>
+    <button type="button" id="quanlysanphambt" onclick="quanlysanphambt()">Xem quản lý</button>
+</div>
+    <script src="themsanpham.js"></script>
+</body>
+</html>

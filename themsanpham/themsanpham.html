@@ -7,53 +7,60 @@
     <link rel="stylesheet" href="themsanpham.css">
 </head>
 <body>
-<div id="quanly" style="display: block;">    
-    <h1 id="displayData" align="center">&nbsp;</h1>
-    <table>
-        <tr>
-            <td>
-                <div class="bd1">
-                    <h3>Thêm sản phẩm</h3>
-                    <input type="text" id="masanpham" placeholder="Mã sản phẩm">
-                    <input type="text" id="tensanpham" placeholder="Tên sản phẩm">
-                    <input type="text" id="sanpham" placeholder="Loại sản phẩm">
-                    <input type="text" id="phanloai" placeholder="Phân loại">
-                    <input type="text" id="urlhinhanh" placeholder="URl hình ảnh">
-                    <input type="text" id="mota" placeholder="Mô tả">
-                    <input type="text" id="SLtonkho" placeholder="SL tồn kho">
-                    <input type="text" id="SLthucte" placeholder="SL thực tế">
-                    <input type="text" id="thuonghieuSP" placeholder="Thương hiệu SP">
-                    <input type="text" id="gia" placeholder="Giá">
-                    <button type="button" id="addsanpham" onclick="themsanpham()">Thêm Sản Phẩm</button>
-                </div>
-            </td>
-            <td>
-                <div class="bd2">
-                    <p>Nhập tên sản phẩm cần xoá</p>
-                    <input type="text" id="tencanxoa">
-                    <button type="button" id="xoasanpham" onclick="xoasanpham()">Xóa Sản Phẩm</button>
-                </div>
-            </td>
-        </tr>
-    </table>
-    <div class="bd3">
-        <h2>Danh sách sản phẩm</h2>
-        <ul id="danhSachSanPham"></ul>
-        
+    <div class="header">
+        <h1 class="h1">Quản lý dữ liệu</h1>
     </div>
-    <button type="button" id="chitietsanphambt" onclick="chitietsanphambt()">Xem chi tiết</button>
-</div>
+    <div id="quanly" style="display: block;">    
 
-<div id="sanphamscreen" style="display: none;">
-    <div class="sanpham">
-        <h2 id="ten">tt</h2>
-        <img id="hinh" src="" alt="">
-        <p id="gioithieu"></p>
-        <p id="giatien"></p>
+            <div class="main">
+                <div class="bd12">
+                    <div class="bd1">
+                        <h3>Thêm sản phẩm</h3>
+                        <input type="text" id="masanpham" placeholder="Mã sản phẩm">
+                        <input type="text" id="tensanpham" placeholder="Tên sản phẩm">
+                        <input type="text" id="sanpham" placeholder="Loại sản phẩm">
+                        <input type="text" id="phanloai" placeholder="Phân loại">
+                        <input type="text" id="urlhinhanh" placeholder="URl hình ảnh">
+                        <input type="text" id="mota" placeholder="Mô tả">
+                        <input type="text" id="SLtonkho" placeholder="SL tồn kho">
+                        <input type="text" id="SLthucte" placeholder="SL thực tế">
+                        <input type="text" id="thuonghieuSP" placeholder="Thương hiệu SP">
+                        <input type="text" id="gia" placeholder="Giá">
+                        <button type="button" id="addsanpham" onclick="themsanpham()">Thêm Sản Phẩm</button>
+                    </div>
+                    <div class="bd2">
+                        <h3>Nhập tên sản phẩm cần xoá</h3>
+                        <input type="text" id="tencanxoa">
+                        <button type="button" id="xoasanpham" onclick="xoasanpham()">Xóa Sản Phẩm</button>
+                    </div>
+                </div>
+                <div class="bd3">
+                    <div class="headdanhsach">
+                        <div>
+                            <h2>Danh sách sản phẩm</h2>
+                            <button type="button" id="chitietsanphambt" onclick="chitietsanphambt()">Xem trang  chi tiết</button>
+                        </div>
+                        <h2 id="displayData"></h1>
+                    </div>
+                    <ul id="danhSachSanPham"></ul>
+                </div>
+            </div>
     </div>
-    <div id="chuyensanpham"></div>
-    <button type="button" id="quanlysanphambt" onclick="quanlysanphambt()">Xem quản lý</button>
-</div>
+
+    <div id="sanphamscreen" style="display: none;">
+        <div class="danhsachchitiet">
+            <div id="chuyensanpham"></div>
+            <div class="right">
+                <button type="button" id="quanlysanphambt" onclick="quanlysanphambt()">Xem trang quản lý</button>
+                <div class="sanpham">
+                    <h2 id="ten"></h2>
+                    <img id="hinh" src="" alt="">
+                    <p id="gioithieu"></p>
+                    <p id="giatien"></p>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="themsanpham.js"></script>
 </body>
 </html>

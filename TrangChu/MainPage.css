@@ -433,7 +433,7 @@ background-color: var(--yellow-color-lighten);
       width: 50%;
       font-size: 25px;
       padding-left: 60px;
-      
+      margin-top: 1.8%;
   }
   .more{
       width: 50%;
@@ -442,6 +442,16 @@ background-color: var(--yellow-color-lighten);
       margin-right: auto;
       text-align: right;
       padding: auto;
+  }
+  @media (max-width: 480px) {
+    .product-type{
+      font-size: 14px;
+      padding-left: 20px;
+    }
+    .more{
+      font-size: 14px;
+      padding-right: 15px;
+    }
   }
   .product a{
       text-decoration: none;
@@ -463,15 +473,40 @@ background-color: var(--yellow-color-lighten);
   margin: auto;
 }
 .name{
-  font-size: 1.5em;
+  font-size: 1.2em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .price{
   margin-top: 10px;
-  font-size: 25px;
+  font-size: 1.2em;
   margin-bottom: 20px;
+}
+@media (max-width: 1024px) {
+  .name {
+    font-size: 1em;
+  }
+  .price {
+    font-size: 1em;
+  }
+}
+  
+@media (max-width: 768px) {
+  .name {
+    font-size: 0.8em;
+  }
+  .price {
+    font-size: 0.8em;
+  }
+}
+@media (max-width: 480px) {
+  .name {
+    font-size: 0.4em;
+  }
+  .price {
+    font-size: 0.4em;
+  }
 }
 .chitiet-btn{
   background-color: #ff5e00;
@@ -483,21 +518,30 @@ background-color: var(--yellow-color-lighten);
   cursor: pointer;
   color: white;
 }
+@media (max-width: 768px) {
+  .chitiet-btn {
+    font-size: 12px;
+  }
+}
 /* Khung SP*/
 .product-row {
   display: flex;
+}
+.product-cell1{
+  margin-top: 15px;
+  height: 118px;
 }
 .product-cell2{
   width: 30%;
   margin: auto;
 }
-.product-cell {
+.img {
   width: 100%;
   position: relative;
   display: block;
   overflow: hidden;
 }
-.product-cell img{
+.img img{
   display: block;
   width: 100%;
   transition: all 0.5s ease-in-out;
@@ -513,7 +557,7 @@ background-color: var(--yellow-color-lighten);
   border: 1px solid #ccc;
   padding: 10px;
 }
-.product-cell img:hover{
+.img img:hover{
   transform: scale(1.05);
   opacity: 0.8;
 }
@@ -633,6 +677,11 @@ table, td{
       text-align: left;
       padding: 15px 20px 15px 100px;
       font-size: 18px;
+  }
+  @media (max-width: 768px) {
+    .footer-lien-he {
+      padding: 10px;
+    }
   }
   .footer-lien-he p{
       padding: 5px;

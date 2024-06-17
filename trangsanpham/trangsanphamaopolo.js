@@ -1,21 +1,18 @@
-function hienThiDanhSachSanPhamQuan() {
-    let luutrusanpham = JSON.parse(localStorage.getItem('luutrusanpham')) || [];
-    let danhSachSanPham = document.getElementById("danhsachsanphamquan");
-    danhSachSanPham.innerHTML = '';
-    let row = document.createElement('div');
-    row.classList.add('product-row');
-
-    let sanPhamQuan = luutrusanpham.filter(sanPham => sanPham.loaisanpham.toLowerCase() === "áo polo");
-    for (let i = 0; i < sanPhamQuan.length; i += 3) {
-        let row = document.createElement('div');
-        row.classList.add('product-row');
-
-        for (let j = i; j < i + 3 && j < sanPhamQuan.length; j++) {
-            let sanpham = sanPhamQuan[j];
-            let productCell = document.createElement('div');
+function hienThiDanhSachSanPham() {
+        let luutrusanpham = JSON.parse(localStorage.getItem('luutrusanpham')) || [];
+        let danhSachSanPham = document.getElementById("danhsachsanpham");
+        danhSachSanPham.innerHTML = '';
+        let row = document .createElement('div');
+        row.classList.add('BaO1Hang');
+    
+        let loaisanPham = luutrusanpham.filter(sanPham => sanPham.loaisanpham.toLowerCase() === "áo polo");
+        for (let i = 0; i < loaisanPham.length ; i++) {
+            let sanpham = loaisanPham[i];
+            let img = document.createElement('div');
             let productCell1 = document.createElement('div');
             let productCell2 = document.createElement('div');
-            productCell.classList.add('product-cell');
+            img.classList.add('img');
+            productCell1.classList.add('product-cell1');
             productCell2.classList.add('product-cell2');
     
             let hinhSanPham = document.createElement('img');
@@ -27,26 +24,26 @@ function hienThiDanhSachSanPhamQuan() {
             let giaSanPham = document.createElement('p');
             giaSanPham.classList.add('price');
             giaSanPham.textContent = sanpham.gia;
-            productButton = document.createElement('a');
+             productButton = document.createElement('a');
             productButton.classList.add('chitiet-btn');
             productButton.textContent = 'Chi tiết';
             productButton.onclick = () =>{
                 localStorage.setItem('sanPhamChiTiet', JSON.stringify(sanpham));
-                window.location.href = '../ChiTiet/chitietsanpham.html';
+                window.location.href = '/ChiTiet/chitietsanpham.html';
             }
-            productCell.appendChild(hinhSanPham);
+    
+            img.appendChild(hinhSanPham);
             productCell1.appendChild(tenSanPham);
             productCell1.appendChild(giaSanPham);
             productCell1.appendChild(productButton);
     
-            productCell2.appendChild(productCell);
+            productCell2.appendChild(img);
             productCell2.appendChild(productCell1);
             row.appendChild(productCell2);
         }
-
         danhSachSanPham.appendChild(row);
     }
-}
-window.onload = function(){
-    hienThiDanhSachSanPhamQuan()
-};
+    
+    window.onload = function(){
+        hienThiDanhSachSanPham()
+    };

@@ -8,10 +8,10 @@ function hienThiDanhSachSanPhamAo() {
     let sanPhamAo = luutrusanpham.filter(sanPham => sanPham.sanpham === "áo");
     for (let i = 0; i < sanPhamAo.length && i < 3; i++) {
         let sanpham = sanPhamAo[i];
-        let productCell = document.createElement('div');
+        let img = document.createElement('div');
         let productCell1 = document.createElement('div');
         let productCell2 = document.createElement('div');
-        productCell.classList.add('product-cell');
+        img.classList.add('img');
         productCell1.classList.add('product-cell1');
         productCell2.classList.add('product-cell2');
 
@@ -32,13 +32,13 @@ function hienThiDanhSachSanPhamAo() {
             window.location.href = '/ChiTiet/chitietsanpham.html';
         }
 
-        productCell.appendChild(hinhSanPham);
+        img.appendChild(hinhSanPham);
         productCell1.appendChild(tenSanPham);
         productCell1.appendChild(giaSanPham);
         productCell1.appendChild(productButton);
 
 
-        productCell2.appendChild(productCell);
+        productCell2.appendChild(img);
         productCell2.appendChild(productCell1);
         row.appendChild(productCell2);
     }
@@ -54,10 +54,10 @@ function hienThiDanhSachSanPhamQuan() {
 
     for (let i = 0; i < sanPhamQuan.length && i < 3; i++) {
         let sanpham = sanPhamQuan[i];
-        let productCell = document.createElement('div');
+        let img = document.createElement('div');
         let productCell1 = document.createElement('div');
         let productCell2 = document.createElement('div');
-        productCell.classList.add('product-cell');
+        img.classList.add('img');
         productCell1.classList.add('product-cell1');
         productCell2.classList.add('product-cell2');
         
@@ -78,12 +78,12 @@ function hienThiDanhSachSanPhamQuan() {
             window.location.href = '../ChiTiet/chitietsanpham.html';
         }
         
-        productCell.appendChild(hinhSanPham);
+        img.appendChild(hinhSanPham);
         productCell1.appendChild(tenSanPham);
         productCell1.appendChild(giaSanPham);
         productCell1.appendChild(productButton);
 
-        productCell2.appendChild(productCell);
+        productCell2.appendChild(img);
         productCell2.appendChild(productCell1);
         row.appendChild(productCell2);
     }

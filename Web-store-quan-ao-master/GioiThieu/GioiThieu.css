@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+.Content-Center{
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    width: 0;
+}
+body {
+   background-color: rgba(255, 204, 0, 0.781);
+    font-family: "Montserrat", sans-serif;
+  }
+.header{
+   margin-top: 60px;
+   font-size: 40px;
+}
+.center{
+   text-align: center;
+}
+.avatar {
+   border-radius: 100px;
+   margin: 5px;
+  }
+  p {
+    width: 450px;
+  }
+  .button {
+    margin-bottom: 1px;
+    width: 400px;
+    padding: 10px;
+    border-radius: 100px;
+    font-family: "Roboto Condensed", cursive;
+    font-size: 20px;
+  }
+    .button .fa-phone-alt{
+        border-radius: 50%
+    }
+ .button:hover .fa-phone-alt{
+    color: green;
+ }
+ .button:hover .fa-facebook{
+    color: blue;
+    background-color:  white;
+    border-radius: 50%
+ }
+ .button:hover .fa-instagram{
+    color: deeppink;
+    background-color: white;
+    border-radius: 70%;
+ }
+ .button:hover .fa-youtube{
+    color: red;
+ }
+ .button:hover .fa-twitter{
+    color: blue;
+ }
+ .backicon{
+   width: 40px;
+   position: absolute;
+   margin-left: 20px;
+ }
+@media(max-width:425px){
+   body{
+      font-size: smaller;
+   }
+   .header{
+      font-size: 25px;
+   }
+   .backicon{
+      width: 30px;
+      margin-left: 20px;
+   }
+   .button{
+      width: 300px;
+      font-size: medium;
+   }
+   h2{
+      font-size: medium;
+   }
+}

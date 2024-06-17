@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* nên */
+body {
+  min-height: 100vh;
+  background-color: rgba(255, 204, 0, 0.781);
+  background-size: cover;
+  background-position: center;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+/* nên tôi */
+
+section {
+  position: relative;
+  z-index: 3;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.header{
+  margin-top: 60px;
+  text-align: center;
+}
+.section-header {
+  margin-bottom: auto;
+  text-align: center;
+}
+
+/* thông tin liên hệ */
+.section-header h2 {
+  color: #FFF;
+  font-weight: bold;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.section-header p {
+  color: #ffffff;
+}
+
+.row  {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+
+.contact-info {
+  width: 50%;
+}
+
+.contact-info-item {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+/* hình */
+.contact-info-icon {
+  height: 70px;
+  width: 70px;
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.contact-info-icon i {
+  font-size: 30px;
+  line-height: 70px;
+}
+
+.contact-info-content {
+  margin-left: 20px;
+}
+.contact-info-content h4 {
+  color: rgb(2, 2, 2);
+  font-size: 1.4em;
+  margin-bottom: 5px;
+}
+
+.contact-info-content p {
+  color: #000000;
+  font-size: 150%;
+}
+
+.contact-form {
+  background-color: #ffffff;
+  padding: 30px;
+  width: 50%;
+  padding-bottom:20px;
+  padding-top: 20px;
+}
+
+.contact-form h2 {
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* input box */
+.contact-form .input-box {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+}
+.contact-form .input-box input,
+.contact-form .input-box textarea{
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+/* chũ hiện lên */
+.contact-form .input-box span {
+  position: absolute;
+  left: 10px;
+  padding: -20px 0;
+  font-size:10px;
+  margin: 0;
+  pointer-events: none;
+  transition: 0.9s;
+  color: #666;
+}
+
+/* chữ */
+.contact-form .input-box input:focus ~ span,
+.contact-form .input-box textarea:focus ~ span{
+  color: #ff640b;
+  font-size: 13px;
+  transform: translateY(-20px);
+}
+/* giữ */
+.contact-form .input-box input[type="submit"]
+{
+  width: 100%;
+  background: #4abd14;
+  color: #FFF;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #4abd14;
+  transition: 0.5s;
+}
+
+.contact-form .input-box input[type="submit"]:hover
+{
+  background: #FFF;
+  color: #4abd14;
+}
+
+@media (max-width: 991px) {
+  body{
+    font-size: smaller;
+  }
+  section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .row {
+    flex-direction: column;
+  }
+  
+  .contact-info {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+  
+  .contact-form {
+    width: 100%;
+  }
+}
+/* trở về bt */
+.backicon{
+  width: 40px;
+  position: absolute;
+  margin-left: 40px;
+}
+
+  .header {
+    font-size: 12px;
+  }
+  .button {
+    margin-bottom: 5px;
+    width: 500px;
+    padding: 5px;
+    border-radius: 100px;
+    font-family: "Roboto Condensed", cursive;
+    font-size: 20px;
+    margin-left: 20px;
+  }
+    .button .fa-phone-alt{
+        border-radius: 50%
+    }
+ .button:hover .fa-phone-alt{
+    color: green;
+ }
+ .button:hover .fa-facebook{
+    color: blue;
+    background-color:  white;
+    border-radius: 50%
+ }
+ .button:hover .fa-instagram{
+    color: deeppink;
+    background-color: white;
+    border-radius: 70%;
+ }
+ .button:hover .fa-youtube{
+    color: red;
+ }
+ .button:hover .fa-twitter{
+    color: blue;
+    
+ }
+ .backicon{
+   width: 40px;
+   position: absolute;
+   margin-left: 20px;
+ }
+@media(max-width:425px){
+   body{
+      font-size: smaller;
+   }
+   .header{
+      font-size: 25px;
+   }
+   .backicon{
+      width: 30px;
+      margin-left: 20px;
+   }
+   .button{
+      width: 300px;
+      font-size: medium;
+   }
+   h2{
+      font-size: medium;
+   }
+}

@@ -592,7 +592,7 @@ background-color: var(--yellow-color-lighten);
 footer{
   margin-top: 50px;
   width: 100%;
-  background-color: hsl(0, 0%, 75%);
+  background-color: rgb(255, 204, 0);
 }
 .footer-container a{
   color: black;

@@ -451,9 +451,9 @@ a {
   }
   #hinh {
     width: 100%;
-    max-width: 50%;
-    height: 35rem;
-    margin: 0 auto;
+    max-height: 600px;
+    margin: auto;
+    object-fit: contain;
   }
   #ten {
     font-size: 30px;
@@ -541,7 +541,7 @@ a {
 footer{
     margin-top: 50px;
     width: 100%;
-    background-color: hsl(0, 0%, 75%);
+    background-color: rgb(255, 204, 0);
 }
 .footer-container a{
     color: black;
@@ -627,4 +627,12 @@ table{
         text-decoration: underline;
         background-color: transparent;
         transition: 0.5s;
+    }
+    @media(max-width:768px){
+      .footer-lien-he{
+        padding: 0;
+      }
+      .thongtinsanpham{
+        margin: 5px;
+      }
     }

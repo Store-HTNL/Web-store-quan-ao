@@ -459,10 +459,25 @@ background-color: var(--yellow-color-lighten);
   }
   /* sản phẩm trong body */
 .tieude{
-  font-size: 20px;
+  font-size: 1.2em;
   color: rgb(255, 205, 0);
   margin-bottom: 10px;
   margin-top: 10px;
+}
+@media(max-width:1024px){
+  .tieude{
+    font-size: 0.8em;
+  }
+}
+@media(max-width:768px){
+  .tieude{
+    font-size: 0.6em;
+  }
+}
+@media(max-width:480px){
+  .tieude{
+    font-size: 0.3em;
+  }
 }
 .tieudeh1 {
   width: 20%;
@@ -483,6 +498,7 @@ background-color: var(--yellow-color-lighten);
   overflow: hidden;
   text-overflow: ellipsis;
   margin-top: 15px;
+  cursor: pointer;
 }
 .price{
   margin-top: 10px;
@@ -536,6 +552,11 @@ background-color: var(--yellow-color-lighten);
 @media (max-width: 768px) {
   .chitiet-btn {
     font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .chitiet-btn {
+    font-size: 8px;
   }
 }
 /* grid */
@@ -610,7 +631,7 @@ background-color: var(--yellow-color-lighten);
 footer{
   margin-top: 50px;
   width: 100%;
-  background-color: hsl(0, 0%, 75%);
+  background-color: rgb(255, 204, 0);
 }
 .footer-container a{
   color: black;
@@ -636,7 +657,7 @@ table, td{
       justify-content: center;
   }
   .social-icon a{
-      padding :10px;
+      padding: 10px;
       background-color: white;
       margin: 15px;
       border-radius: 50%;

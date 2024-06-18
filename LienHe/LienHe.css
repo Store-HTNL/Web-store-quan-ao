@@ -382,7 +382,8 @@ a {
         margin-bottom: 15px;
       }
     
-      .footer-social-media-links, .footer-nav, .footer-lien-he {
+      .footer-
+      , .footer-nav, .footer-lien-he {
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -405,7 +406,7 @@ a {
  body {
   min-height: 100vh;
   align-items: center;
-  background-image: url('LienHe.jpeg');
+
   background-size: cover;
   background-position: center;
   position: relative;
@@ -452,7 +453,7 @@ section {
 .contact-info-icon {
   height: 70px;
   width: 70px;
-  background-color: #879dff;
+  background-color: var(--yellow-color);
   text-align: center;
   border-radius: 50%;
 }
@@ -466,13 +467,13 @@ section {
   margin-left: 20px;
 }
 .contact-info-content h4 {
-  color: rgb(255, 255, 255);
+  color: black;
   font-size: 1.4em;
   margin-bottom: 5px;
 }
 
 .contact-info-content p {
-  color: #FFF;
+  color: black;
   font-size: 1em;
 }
 
@@ -574,7 +575,15 @@ section {
   align-items: center;
   justify-content: center;
 }
-.social-media p{
+.social-media-links{
+  width: 200%;
+  padding-left: auto;
+  padding-right: auto;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  position: relative;
+  display: flex;
   font-family: system-ui;
   width: 450px;
 }

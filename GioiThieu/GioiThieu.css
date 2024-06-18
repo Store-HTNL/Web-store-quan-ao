@@ -39,7 +39,6 @@
  }
  
  body {
-  background-image: linear-gradient(to right, #ed9376, #DECBA4);
   color: rgb(0, 0, 0);
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
@@ -395,27 +394,19 @@
          align-items: center;
        }
      }
-.backicon{
-  width: 40px;
-  position: absolute;
-  margin: 15px;
-  top: 0;
-  left: 0;
-}
 .main-content{
-  justify-content: center;
   margin: 15px;
   position: relative;
   align-items: center;
-  text-align: center;
 }
 .title{
   font-weight: bold;
   margin: 2.5rem 1rem;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
 }
 .main-content p{
-  padding-inline: 15px  ;
+  font-size: 1.3rem;
+  padding:10px 20px ;
 }
 /* Footer */
 footer{

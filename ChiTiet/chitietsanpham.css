@@ -366,7 +366,7 @@ a {
         .sub-menu {
         position: static;
     }
-    .footer-container table {
+    .footer-container tr {
         display: flex;
         flex-direction: column;
       }

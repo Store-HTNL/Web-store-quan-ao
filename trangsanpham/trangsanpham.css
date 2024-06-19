@@ -378,7 +378,7 @@ background-color: var(--yellow-color-lighten);
       .sub-menu {
       position: static;
   }
-  .footer-container table {
+  .footer-container tr {
       display: flex;
       flex-direction: column;
     }
@@ -503,6 +503,9 @@ background-color: var(--yellow-color-lighten);
   text-overflow: ellipsis;
   margin-top: 15px;
   cursor: pointer;
+}
+.name[title]:hover::after{
+  content: attr(mmbeo);
 }
 .price{
   margin-top: 10px;

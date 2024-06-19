@@ -375,7 +375,7 @@ background-color: var(--yellow-color-lighten);
       .sub-menu {
       position: static;
   }
-  .footer-container table {
+  .footer-container tr {
       display: flex;
       flex-direction: column;
     }

@@ -21,6 +21,7 @@ function hienThiDanhSachSanPhamAo() {
         let tenSanPham = document.createElement('h3');
         tenSanPham.classList.add('name');
         tenSanPham.textContent = sanpham.tensanpham;
+        tenSanPham.title = sanpham.tensanpham;
         let giaSanPham = document.createElement('p');
         giaSanPham.classList.add('price');
         giaSanPham.textContent = sanpham.gia;

@@ -691,3 +691,13 @@ table, td{
       background-color: transparent;
       transition: 0.5s;
   }
+  @keyframes colorChange {
+    0% { color: red; }
+    25% { color: rgb(72, 255, 0); }
+    50% { color: rgb(0, 234, 255); }
+    75% { color: rgb(64, 0, 128); }
+    100% { color: rgb(255, 0, 208); }
+  }
+  .rainbow-text {
+    animation: colorChange 1s infinite;
+  }

@@ -469,14 +469,18 @@ background-color: var(--yellow-color-lighten);
   }
   /* sản phẩm trong body */
 .pic1{
-  max-width: 100%;
+  width: 100%;
+  max-height: 600px;
   margin: auto;
+  object-fit: contain;
+  cursor: pointer;
 }
 .name{
   font-size: 1.2em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  cursor: pointer;
 }
 .price{
   margin-top: 10px;

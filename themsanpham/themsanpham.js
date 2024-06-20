@@ -5,7 +5,7 @@ function themsanpham() {
     let phanloai = document.getElementById('phanloai').value;
     let urlhinhanh = document.getElementById('urlhinhanh').value;
     let mota = document.getElementById('mota').value;
-    let thuonghieuSP = document.getElementById('thuonghieuSP').value;
+    let motachitiet = document.getElementById('thuonghieuSP').value;
     let SLtonkho = document.getElementById('SLtonkho').value;
     let SLthucte = document.getElementById('SLthucte').value;
     let gia = document.getElementById('gia').value;
@@ -17,7 +17,7 @@ function themsanpham() {
         return;
     }
 
-    luutrusanpham.push({ masanpham, tensanpham, sanpham, phanloai, urlhinhanh, mota, thuonghieuSP, SLtonkho, SLthucte, gia});
+    luutrusanpham.push({ masanpham, tensanpham, sanpham, phanloai, urlhinhanh, mota, motachitiet, SLtonkho, SLthucte, gia});
 
     localStorage.setItem('luutrusanpham', JSON.stringify(luutrusanpham));
     nutchuensanpham();

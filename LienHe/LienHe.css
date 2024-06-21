@@ -2,8 +2,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
@@ -48,6 +48,8 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
+  position: relative; /* Cần thiết để sử dụng absolute positioning cho footer */
+  min-height: 100vh;
 }
 
 ul {
@@ -603,7 +605,7 @@ section {
 }
 /* Footer */
 footer{
-  margin-top: 50px;
+  margin-top: 39px;
   width: 100%;
   background-color: rgb(255, 204, 0);
 }
@@ -742,4 +744,14 @@ table, td{
   .footer-lien-he {
     align-items: center;
   }
+}
+@keyframes colorChange {
+  0% { color: red; }
+  25% { color: rgb(72, 255, 0); }
+  50% { color: rgb(0, 234, 255); }
+  75% { color: rgb(64, 0, 128); }
+  100% { color: rgb(255, 0, 208); }
+}
+.rainbow-text {
+  animation: colorChange 1s infinite;
 }

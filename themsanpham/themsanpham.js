@@ -13,7 +13,7 @@ function themsanpham() {
     let sanphamdaco = luutrusanpham.find(luutrusanpham => luutrusanpham.tensanpham === tensanpham);
 
     if (sanphamdaco) {
-        document.getElementById("displayData").textContent = "Sản phẩm không hợp lệ hoặc đã tồn tại.";
+        document.getElementById("displayData").textContent = "Sản phẩm không hợp lệ hoặc đã tồn tại!";
         return;
     }
 

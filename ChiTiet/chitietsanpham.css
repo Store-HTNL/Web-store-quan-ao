@@ -173,7 +173,7 @@ a {
   transition: background-color .3s;
 }
 .nav__link a {
-  width: 80%;
+  width: 100%;
   color: #fff;
 }
 
@@ -204,13 +204,6 @@ a {
 }
 
 .dropdown__arrow {
-  margin-left: auto;
-  font-size: 1.25rem;
-  font-weight: initial;
-  transition: transform .4s;
-}
-.dropdown__subarrow {
-  margin-left: auto;
   font-size: 1.25rem;
   font-weight: initial;
   transition: transform .4s;
@@ -229,11 +222,12 @@ a {
   transition: background-color .3s;
 }
 .dropdown__link a{
-  width: 80%;
+  width: 100%;
   color: #000;
 }
 .dropdown__link i, 
-.dropdown__sublink i {  
+.dropdown__sublink i {
+  width: 100%;
   font-size: 1.25rem;
   font-weight: initial;
 }
@@ -261,12 +255,11 @@ a {
 .dropdown__item:hover .dropdown__arrow {
   transform: rotate(180deg);
 }
-.dropdown__subitem:hover .dropdown__subarrow {
-  transform: rotate(180deg);
-}
-
 
 /*=============== DROPDOWN SUBMENU ===============*/
+.dropdown__add {
+  margin-left: auto;
+}
 
 .dropdown__sublink {
   background-color: var(--yellow-color-lighten);
@@ -399,7 +392,47 @@ a {
       .footer-lien-he {
         align-items: center;
       }
-    } 
+    }
+@media (max-width: 768px) {
+    /* Menu */
+    #main-menu {
+    flex-direction: column;
+}
+    #main-menu li {
+    margin-right: 0;
+    margin-bottom: 10px;
+}
+    .sub-menu {
+    position: static;
+}
+/* footer */
+.footer-container table {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-container td {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .footer-social-media-links, .footer-nav, .footer-lien-he {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-social-media-links > div,
+  .footer-nav > div,
+  .footer-lien-he > div {
+    width: 100%;
+  }
+  .footer-social-media-links,
+  .footer-nav ul,
+  .footer-lien-he {
+    align-items: center;
+  }
+}
 /* thông tin sản phầm */
 .thongtinsanpham {
     display: flex;
@@ -418,9 +451,9 @@ a {
   }
   #hinh {
     width: 100%;
-    max-width: 50%;
-    height: 35rem;
-    margin: 0 auto;
+    max-height: 600px;
+    margin: auto;
+    object-fit: contain;
   }
   #ten {
     font-size: 30px;
@@ -508,7 +541,7 @@ a {
 footer{
     margin-top: 50px;
     width: 100%;
-    background-color: hsl(0, 0%, 75%);
+    background-color: rgb(255, 204, 0);
 }
 .footer-container a{
     color: black;
@@ -594,4 +627,12 @@ table{
         text-decoration: underline;
         background-color: transparent;
         transition: 0.5s;
+    }
+    @media(max-width:768px){
+      .footer-lien-he{
+        padding: 0;
+      }
+      .thongtinsanpham{
+        margin: 5px;
+      }
     }

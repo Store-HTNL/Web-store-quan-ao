@@ -378,7 +378,7 @@ background-color: var(--yellow-color-lighten);
       .sub-menu {
       position: static;
   }
-  .footer-container table {
+  .footer-container tr {
       display: flex;
       flex-direction: column;
     }
@@ -466,7 +466,7 @@ background-color: var(--yellow-color-lighten);
   font-size: 1.2em;
   color: rgb(255, 205, 0);
   margin-bottom: 10px;
-  margin-top: 10px;
+  margin-top: 50px;
 }
 @media(max-width:1024px){
   .tieude{
@@ -491,10 +491,12 @@ background-color: var(--yellow-color-lighten);
   margin: 0 auto; /* Căn giữa theo chiều ngang */
 }
 .pic1{
-  width: 100%;
+  width: 50%;
+  height: 50%;
   max-height: 600px;
   margin: auto;
   object-fit: contain;
+  cursor: pointer;
 }
 .name{
   font-size: 1.2em;
@@ -503,6 +505,9 @@ background-color: var(--yellow-color-lighten);
   text-overflow: ellipsis;
   margin-top: 15px;
   cursor: pointer;
+}
+.name[title]:hover::after{
+  content: attr(mmbeo);
 }
 .price{
   margin-top: 10px;
@@ -634,6 +639,7 @@ footer{
   width: 100%;
   background-color: rgb(255, 204, 0);
   bottom: 0;
+  margin-top: 40px;
 }
 .footer-container a{
   color: black;
@@ -731,4 +737,14 @@ table, td{
       text-decoration: underline;
       background-color: transparent;
       transition: 0.5s;
+  }
+  @keyframes colorChange {
+    0% { color: red; }
+    25% { color: rgb(72, 255, 0); }
+    50% { color: rgb(0, 234, 255); }
+    75% { color: rgb(64, 0, 128); }
+    100% { color: rgb(255, 0, 208); }
+  }
+  .rainbow-text {
+    animation: colorChange 1s infinite;
   }

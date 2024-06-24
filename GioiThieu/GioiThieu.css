@@ -370,7 +370,7 @@
          .sub-menu {
          position: static;
      }
-     .footer-container table {
+     .footer-container tr {
          display: flex;
          flex-direction: column;
        }
@@ -398,17 +398,33 @@
        }
      }
 .main-content{
-  margin: 15px;
   position: relative;
   align-items: center;
   flex: 1;
+  background-image: url(../img/backgioithieu.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.noidung{
+  margin: auto;
 }
 .title{
-  font-weight: bold;
-  margin: 2.5rem 1rem;
-  font-size: 2.3rem;
+  font-size: 1.3em;
   color: rgb(255, 205, 0);
+  margin-top: 50px;
+  margin-bottom: 40px;
+  text-align: center;
+  justify-content: center;
 }
+.text1 {
+  text-align: left;
+  font-weight: 600;
+}
+.text2 {
+  text-align: left;
+  font-weight: 300;
+}
+
 .main-content p{
   font-size: 1.3rem;
   padding:10px 20px ;
@@ -510,5 +526,15 @@ table, td{
       text-decoration: underline;
       background-color: transparent;
       transition: 0.5s;
+  }
+  @keyframes colorChange {
+    0% { color: red; }
+    25% { color: rgb(72, 255, 0); }
+    50% { color: rgb(0, 234, 255); }
+    75% { color: rgb(64, 0, 128); }
+    100% { color: rgb(255, 0, 208); }
+  }
+  .rainbow-text {
+    animation: colorChange 1s infinite;
   }
   

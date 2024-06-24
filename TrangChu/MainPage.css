@@ -375,7 +375,7 @@ background-color: var(--yellow-color-lighten);
       .sub-menu {
       position: static;
   }
-  .footer-container table {
+  .footer-container tr {
       display: flex;
       flex-direction: column;
     }
@@ -469,14 +469,19 @@ background-color: var(--yellow-color-lighten);
   }
   /* sản phẩm trong body */
 .pic1{
-  max-width: 100%;
+  width: 80%;
+  height: 70%;
+  max-height: 600px;
   margin: auto;
+  object-fit: contain;
+  cursor: pointer;
 }
 .name{
   font-size: 1.2em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  cursor: pointer;
 }
 .price{
   margin-top: 10px;
@@ -690,4 +695,14 @@ table, td{
       text-decoration: underline;
       background-color: transparent;
       transition: 0.5s;
+  }
+  @keyframes colorChange {
+    0% { color: red; }
+    25% { color: rgb(72, 255, 0); }
+    50% { color: rgb(0, 234, 255); }
+    75% { color: rgb(64, 0, 128); }
+    100% { color: rgb(255, 0, 208); }
+  }
+  .rainbow-text {
+    animation: colorChange 1s infinite;
   }
